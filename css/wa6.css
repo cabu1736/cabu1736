@@ -1,0 +1,15 @@
+body{ 
+    background: url('/img/CUfootball.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+footer{ 
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+
