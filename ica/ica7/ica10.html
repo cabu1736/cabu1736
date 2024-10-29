@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICA 10</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            transition: color 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="header">Welcome to ICA 10!</h1>
+    <button id="colorButton">Change Background Color</button>
+    <button id="textButton">Change Header Text</button>
+
+    <script>
+        // Event listener for changing background color
+        document.getElementById('colorButton').addEventListener('click', function() {
+            const colors = ['#ffadad', '#ffd6a5', '#fdffb6', '#caffbf', '#9bfbc0', '#a0e7e5', '#b9b3ff'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        });
+
+        // Event listener for changing header text
+        document.getElementById('textButton').addEventListener('click', function() {
+            const newText = "You changed the text!";
+            document.getElementById('header').innerText = newText;
+        });
+    </script>
+</body>
+</html>
