@@ -1,0 +1,78 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #eccff0, #eb91f7);
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end; /* Align level to the right */
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.8);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.stats {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.stats p {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Canvas Styling */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#gameCanvas {
+  display: block;
+  background: linear-gradient(to bottom, #ffffff, #ffffff);
+  border: 2px solid #e247cb;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Overlays */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background: #e247cb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background: #ff6347;
+}

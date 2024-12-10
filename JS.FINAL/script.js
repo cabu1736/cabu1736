@@ -10,7 +10,6 @@ let level = 1;
 let platforms = [];
 let player;
 
-// Player Class
 class Player {
   constructor() {
     this.width = 40;
@@ -21,11 +20,27 @@ class Player {
     this.dy = 0;
     this.gravity = 0.5;
     this.jumpStrength = -10;
+    this.image = new Image();
+    this.image.src = 'character.jpg'; // Path to your image
+    this.imageLoaded = false;
+
+    this.image.onload = () => {
+      this.imageLoaded = true;
+      console.log('Image loaded successfully!');
+    };
+    this.image.onerror = () => {
+      console.error('Failed to load image at character.jpg');
+    };
   }
 
   draw() {
-    ctx.fillStyle = 'red';
-    ctx.fillRect(this.x, this.y, this.width, this.height);
+    if (this.imageLoaded) {
+      ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
+    } else {
+      // Draw a placeholder if the image hasn't loaded yet
+      ctx.fillStyle = 'red';
+      ctx.fillRect(this.x, this.y, this.width, this.height);
+    }
   }
 
   move() {
@@ -139,7 +154,7 @@ function scrollPlatforms() {
 // Game Loop
 function gameLoop() {
   if (!gameRunning) return;
-  
+
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   player.move();

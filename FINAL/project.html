@@ -7,22 +7,26 @@
   <link rel="stylesheet" href="project.css">
 </head>
 <body>
- 
-    <div id="game-container">
-        <div id="character">
-          <img src="character.jpg" alt="Character" id="character-image">
-        </div>
-        <div id="platform-container"></div>
-        <div id="score">Score: 0</div>
-      
-        <!-- Start Screen -->
-        <div id="start-screen">
-          <h1 id="game-title">Piggy Jump! </h1>
-          <button type="start-button">Start Game</button>
-        </div>
-      
-    <script src="project.js" ></script>
-  </body>
-  </html>
+  <div id="game-container">
+    <div id="character">
+      <img src="character.jpg" alt="Character" id="character-image">
+    </div>
+    <div id="platform-container"></div>
+    <div id="score">Score: 0</div>
 
-  
+
+    
+    <!-- Start Screen -->
+    <div id="start-screen">
+        <h1 id="game-title">Piggy Jump!</h1>
+        <button type="button">Start Game</button>
+      </div>
+      
+    <!-- Game Over Screen -->
+    <div id="game-over" class="hidden">
+      <!-- Content dynamically updated by JavaScript -->
+    </div>
+ 
+<script src="project.js"></script>
+</body>
+</html>

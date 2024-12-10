@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piggy Jump</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="stats">
+      <p id="level">Level: 1</p>
+    </div>
+  </header>
+  <main>
+    <canvas id="gameCanvas"></canvas>
+    <div id="startScreen" class="overlay">
+      <h2>Welcome to Piggy Jump!</h2>
+      <button id="startButton">Start Game</button>
+    </div>
+    <div id="endScreen" class="overlay hidden">
+      <h2 id="endMessage"></h2>
+      <button id="restartButton">Restart</button>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+<body>
+    <div id="game-container">
+      <div id="character">
+        <img src="character.jpg" alt="Character" id="character-image">
+      </div>
+      <div id="platform-container"></div>
+      <div id="score">Score: 0</div>
